@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 from os.path import join, dirname
 import environ
+import django_heroku
 
 #from dotenv import load_dotenv
 import dj_database_url
@@ -153,3 +154,8 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #GDAL_PATH_LIBRARY = "C:\Program Files\GDAL\gdal204.dll"
+
+django_heroku.settings(locals())
+
+GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
+GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
