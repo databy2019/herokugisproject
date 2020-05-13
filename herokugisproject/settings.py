@@ -99,9 +99,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'db_restheroku',
         'HOST': 'localhost',
-        'USER': os.environ['DATABASE_USER'],
-        'PASSWORD': os.environ['DATABASE_PASSWORD'],
-        'PORT': int(os.environ['DATABASE_PORT']),
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'PORT': 5432,
     }
 }
 db_from_env = dj_database_url.config(conn_max_age=500)
