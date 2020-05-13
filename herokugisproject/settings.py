@@ -97,8 +97,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['DATABASE_NAME'],
-        'HOST': os.environ['DATABASE_HOST'],
+        'NAME': 'db_restheroku',
+        'HOST': 'localhost',
         'USER': os.environ['DATABASE_USER'],
         'PASSWORD': os.environ['DATABASE_PASSWORD'],
         'PORT': int(os.environ['DATABASE_PORT']),
